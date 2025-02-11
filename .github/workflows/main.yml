@@ -1,0 +1,69 @@
+name: Update Packages Repository
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/*.deb'
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import GPG key and setup gpg
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          echo "$GPG_PRIVATE_KEY" | gpg --import --batch
+          echo "allow-preset-passphrase" > ~/.gnupg/gpg-agent.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          echo "no-tty" >> ~/.gnupg/gpg.conf
+          gpg-connect-agent reloadagent /bye
+
+      - name: Generate Packages and Release files
+        env:
+          GPG_TTY: $(tty)
+          GNUPGHOME: /home/runner/.gnupg
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          USER: ${{github.repository_owner}}
+          REPO: ${{github.event.repository.name}}
+        run: |
+          mkdir -p public/dists/stable/main/binary-arm64
+          dpkg-scanpackages --arch arm64 packages > public/dists/stable/main/binary-arm64/Packages
+          gzip -k -f public/dists/stable/main/binary-arm64/Packages
+          
+          cd public/dists/stable
+          
+          cat << EOF > Release
+          Origin: https://$USER.github.io/$REPO
+          Label: Droidian PKG
+          Suite: stable
+          Codename: stable
+          Version: 1.0
+          Architectures: arm64
+          Components: main
+          Description: Packages 
+          EOF
+          
+          apt-ftparchive release . >> Release
+          
+          echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID --clearsign -o InRelease Release
+          echo "$GPG_PASSPHRASE" | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --default-key $GPG_KEY_ID -abs -o Release.gpg Release
+
+      - name: Move packages directory to public
+        run: mv packages public/packages
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true
