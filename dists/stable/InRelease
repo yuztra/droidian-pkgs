@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: https://yuztra.github.io/droidian-pkgs
+Label: Droidian PKG
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: arm64
+Components: main
+Description: Packages 
+Date: Sat, 22 Feb 2025 11:09:17 +0000
+MD5Sum:
+ de037e8a5681f1c5bbd8dedbc6b5e6fc              210 Release
+ 9f58fa149f08ac1a836b6e9e786c5009             9004 main/binary-arm64/Packages
+ e3e7c318953fec109be40ecf901d73d5             2496 main/binary-arm64/Packages.gz
+SHA1:
+ ee03de3f24db4d2b71b138955d27dc07f5c3cfe8              210 Release
+ a49ec90941ab8667adabf6d08c56cc12f8642f69             9004 main/binary-arm64/Packages
+ 35f3125191a6df6daf7cb41ddae9c826788020ee             2496 main/binary-arm64/Packages.gz
+SHA256:
+ 159724c6fe1343a24001282dd62c2af98445b293a180ea63cd18fbdf869bb00b              210 Release
+ ac8b929964239a1069bfba28a34e9224834aec0c144045219aedc72d98befab9             9004 main/binary-arm64/Packages
+ 71102eed6e30aa83197c00b0987fb78d9d16203a3954a4edfdaecbe6bf9202d6             2496 main/binary-arm64/Packages.gz
+SHA512:
+ 694727a753fcd8294bb9659d50b1383b590f6078f59593d1e03849f0c8de249193068723c02b2876ee8fd38686e79a7ddda26a401d9e32a91e9a334b57ee9c63              210 Release
+ 0df374de31dff2b3d69d3b7871163646c6529ad0fd38c8b7759b2d8ce7502eda9c2c7c441f0453fb14827a765864b881e4d3c8f74760734d8839ae0f3c7b7d5e             9004 main/binary-arm64/Packages
+ a44e5fa889d93d1feb1aaa29c5ffafd5e626175e5aeb609fb25539e05949ee30eab95a232b3f568e5ab1230b8e05dac73dd49905d21a3043871e79ec6ca01899             2496 main/binary-arm64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE/a5tt2TkSCtRvO9qXd1NabNUyA8FAme5sF0ACgkQXd1NabNU
+yA8MWg//VFxaRtJqDbrulHp5zdTa+PHzJi7ChqAAVh3m1avopTi9RvbhXZEcPgDM
+vOqcGyEZPWpPLDUZPKOGpCLwuQ7uDyK4fbEEpHJOgPP39p87V+xW8R00kK3uvxwU
+nHE/tsrTvUfX/NZzIFvSyCcbXffHi3k6/sRkeeY1c5QHjVdzrp/PETYDUyu5TTmM
+GKGsjul7Cf0QFuzFmsOOzgJFSF8qfOKIRyemMwwS380/vZbQJOqyLpjszrU5rjwX
+OBPIYQQqZqbd9iM4KdwmSidavbB3deZC0Lvr78ZdOP9CVJhSb9+MjA11GzfXeY9p
+qxSdWZb2a6v5pLATs8uNtB8MeVio8B64dVMbGfRbXmXIXUW9fWf3Noyyol99aKNy
+J1W3ieEJmTmtx03EK2B7dRdolyuQWHUwyYZfGAlRlbQtDa4sslAa4Vs4nPMisdas
+SQpTNN42YkDAQ06PQyWGR7kg3R/H1Nj+aPL0vz82e+o9xsiGzSgC5BLKp2puhOg2
+nKKxm4wTWq6GzU3GDVwX/ftG7K8HAtsgyOJhO/6/ygd8sZjK+1drDegxLE2eHWw9
+mrrRlyX3Vqt3sQq9TEoaWG/ufrkV+UCasaZbXXosAnDp9M171jznWSQo6zbJiKjJ
+jsgSTNI5BNcchQYI+PA+uzoUEFCGeyU63xPSS4KoSKSxBBthTyU=
+=ZPls
+-----END PGP SIGNATURE-----
