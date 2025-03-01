@@ -1,0 +1,25 @@
+Origin: https://yuztra.github.io/droidian-pkgs
+Label: Droidian PKG
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: arm64
+Components: main
+Description: Packages 
+Date: Sat, 01 Mar 2025 00:39:08 +0000
+MD5Sum:
+ bfb03768c8ca076f5156d386a701a382              210 Release
+ b99542e5f9e2d8fb9cc23d9a56c5db80            15157 main/binary-arm64/Packages
+ 92bdbb377a9e0b29c62ffc18fa3a189c             3501 main/binary-arm64/Packages.gz
+SHA1:
+ f8c91e2413012b65270e4a0da8ab8c673036995b              210 Release
+ 84772bd8652874e717b77a7441abcee1cf57bba7            15157 main/binary-arm64/Packages
+ 9a449076d018da2d2426c6732ae25d7a36e786a7             3501 main/binary-arm64/Packages.gz
+SHA256:
+ d085636dbe5266225c30630079e2a48c792791bab11c63ceda5bddf15f2a683e              210 Release
+ 309319a300f4801d953715a9f35e936dbb871989a712150aeec81c1a516e918d            15157 main/binary-arm64/Packages
+ 3756c65ed304ee7ed06c4fe30010f922548f683272ba41f60949467cf5114bcb             3501 main/binary-arm64/Packages.gz
+SHA512:
+ 8b6371373dc313b9eef7e70a61c85adb5710022665671797300e6fcfc51d93a338eabbc8a591a2dcc293511c49f530bc56bee381faec78b1eb2edd00ee8836be              210 Release
+ 0e702c9d04e03daa1b32c545faf42850a5b6c088d42966da71eb073bfb15055befa4463f7f827bbef4c1fcfd682c1398ab7adaede41bff6937c4e5e23b302358            15157 main/binary-arm64/Packages
+ 9bd5ca293517a4fa7690d1701ebb8f55fc6ae196e6fa32ba3ee7a9e7d82610773bf435b43823259342808ac023117d3c6df7d3afd99bf484d5cd429f1e82a369             3501 main/binary-arm64/Packages.gz
